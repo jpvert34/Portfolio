@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link
+      as="style"
+      href="CSS/fonts.googleapis.com_css2_family=Lato_wght@400;700&display=swap.css"
+      onload="this.rel='stylesheet'"
+      rel="preload"
+    />
+    <link
+      as="style"
+      href="CSS/fonts.googleapis.com_css2_family=Montserrat_wght@400;700&display=swap.css"
+      onload="this.rel='stylesheet'"
+      rel="preload"
+    />
+    <link
+      href="CSS/cdn.jsdelivr.net_npm_tailwindcss@2.2.16_dist_tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LedY48oAAAAAH6CN9wG_OGTK9e_--odPsdHMLNs"></script>
+    <title>Portfolio de Jean Philippe VERT</title>
+  </head>
+
+  <body class="font-sans">
+    <nav class="bg-blue-500 text-white fixed top-0 w-full p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-xl font-semibold" href="#">Jean Philippe VERT</a>
+        <div @click.away="open = false" x-data="{ open: false }">
+          <button
+            @click="open = !open"
+            class="relative z-10 block bg-blue-500 text-white hover:bg-white hover:text-blue-500"
+          >
+            ☰
+          </button>
+
+          <div
+            class="absolute right-0 mt-2 w-48 bg-blue-500 shadow-lg z-20"
+            x-show="open"
+          >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#hero"
+              >Accueil</a
+            >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#about"
+              >Profil</a
+            >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#Experience"
+              >Expérience</a
+            >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#Training"
+              >Formation</a
+            >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#Skills"
+              >Compétences</a
+            >
+            <a
+              class="block px-4 py-2 text-white hover:bg-white hover:text-blue-500"
+              href="#contact"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="flex items-center justify-center h-screen bg-center bg-cover text-white relative"
+      id="hero"
+      style="background-image: url('Images/font.webp')"
+    >
+      <div class="z-10 text-center">
+        <h1 class="text-5xl font-extrabold">Jean Philippe VERT</h1>
+        <p class="text-xl font-semibold mt-4">Développeur full stack</p>
+      </div>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+      ></div>
+      <a
+        class="scroll-link absolute bottom-10 left-1/2 text-white rounded-full px-4 py-1 transition-transform duration-300 ease-in-out animate-bounce"
+        href="#about"
+      >
+        <svg
+          height="1em"
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z"
+            fill="rgba(255, 255, 255, 0.7)"
+          />
+        </svg>
+      </a>
+    </section>
+
+    <section class="container mx-auto py-10 px-4" id="about">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img
+          alt="Photo de Jean Philippe VERT"
+          class="w-1/2 h-auto mx-auto"
+          src="Images/picture.webp"
+        />
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Qui est Jean Philippe VERT ?</h2>
+          <p class="text-lg">
+            Avec une riche expérience acquise au sein de la prestigieuse Cellule OpenSilex de l’unité MISTEA à l’INRAE de Montpellier, j’ai eu le privilège de participer activement au développement géospatial de la suite logicielle OpenSilex, un outil conçu pour la gestion avancée des données en agronomie.
+          </p>
+          <br />
+          <p class="text-lg">
+            Profondément ancrée dans la méthodologie agile, cette immersion n’a pas seulement renforcé mon expertise en Java, Vue.js et CSS ; elle m’a également permis d’affiner ma maîtrise des systèmes d’information géographique, du Web sémantique et des bases de données orientées documents.
+          </p>
+          <br />
+          <p class="text-lg">
+            Porté par une rigueur sans failles, un dynamisme contagieux et une soif inextinguible d’apprentissage, je suis résolument engagé à innover et à exceller dans mon domaine. Je serais honoré de pouvoir échanger davantage lors d’une future entrevue.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="container mx-auto text-center py-10 px-4 rounded"
+      id="Experience"
+    >
+      <h2 class="text-3xl font-semibold mb-4">Expérience</h2>
+      <!-- La fenêtre modale -->
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <div class="bg-white rounded shadow-md p-6 max-w-3xl mx-auto">
+            <h2
+              class="text-lg font-bold border-b border-gray-200 pb-2 mb-4 text-blue-600"
+            >
+              Gestion de Bases de Données et Étude Comparative :
+            </h2>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                J'ai plongé dans plusieurs facettes techniques et fonctionnelles
+                du projet, en mettant l'accent sur la gestion de l'information
+                spatiale.
+              </li>
+              <li>
+                J'ai mené une étude comparative sur MongoDB, RDF4J et GraphDB
+                pour le stockage de données géographiques.
+              </li>
+              <li>
+                J'ai traité des données générées avec R, en utilisant Python
+                pour leur préparation.
+              </li>
+            </ul>
+
+            <h2
+              class="text-lg font-bold border-b border-gray-200 pb-2 mb-4 text-blue-600"
+            >
+              Travail Technique Approfondi :
+            </h2>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                J'ai envisagé la substitution de RDF4J par GraphDB, étant donné
+                leurs API similaires.
+              </li>
+              <li>
+                J'ai apporté des modifications à des services Web et exploré
+                comment optimiser le stockage des données.
+              </li>
+            </ul>
+
+            <h2
+              class="text-lg font-bold border-b border-gray-200 pb-2 mb-4 text-blue-600"
+            >
+              Visualisation et Interaction :
+            </h2>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                J'ai travaillé sur la visualisation des données à l'aide d'un
+                système d'information géographique.
+              </li>
+              <li>
+                J'ai été impliqué dans le prototypage de zonage et la conception
+                de diagrammes pour faciliter les interactions.
+              </li>
+            </ul>
+
+            <h2
+              class="text-lg font-bold border-b border-gray-200 pb-2 mb-4 text-blue-600"
+            >
+              Défis et Solutions :
+            </h2>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                J'ai fait face à de nombreux défis, mais cela m'a permis
+                d'acquérir des compétences précieuses.
+              </li>
+              <li>
+                J'ai contribué de manière significative au projet OpenSILEX.
+              </li>
+              <li>
+                J'ai mis en place des mécanismes pour annoter efficacement les
+                zones, et documenté les problèmes rencontrés pour guider les
+                futurs utilisateurs et développeurs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul>
+        <li class="mb-2">
+          Assistants Ingénieurs dans l'équipe d'OpenSILEX, INRAE-UMR MISTEA,
+          Montpellier (Septembre 2020 - Juin 2021)
+        </li>
+        <li class="mb-2">
+          <div class="article" data-target="#myModal">
+            <p>
+              Stage dans l'équipe d'OpenSILEX, INRAE, Montpellier (<a
+                class="lien-modal"
+                >février 2020 - août 2020</a
+              >)
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="container mx-auto text-center py-10 px-4 rounded">
+      <h2 class="text-3xl font-semibold mb-4">Projets</h2>
+      <ul>
+        <li class="mb-2">TER, UM, Montpellier (2019)</li>
+        <li class="mb-2">Projet SmartCity, UM, Montpellier (2019)</li>
+        <li class="mb-2">
+          Projet d'extraction de connaissances, UM, Montpellier (2019)
+        </li>
+      </ul>
+    </section>
+    <section
+      class="container mx-auto text-center py-10 px-4 rounded"
+      id="Training"
+    >
+      <h2 class="text-3xl font-semibold mb-4">Formation</h2>
+      <ul>
+        <li class="mb-2">
+          <div class="article">
+            <a
+              href="https://informatique-fds.edu.umontpellier.fr/files/2017/11/Master-AIGLE2017-3.pdf"
+              target="_blank"
+              ><p>
+                Master 2 - Architectures et ingénierie du logiciel et du Web,
+                faculté des Sciences, Montpellier (2020)
+              </p></a
+            >
+          </div>
+        </li>
+        <li class="mb-2">
+          Licence Informatique, faculté des Sciences, Montpellier (2018)
+        </li>
+      </ul>
+    </section>
+    <section
+      class="container mx-auto text-center py-10 px-4 rounded shadow-lg"
+      id="Skills"
+    >
+      <h2 class="text-3xl font-semibold mb-4">Compétences informatiques</h2>
+      <ul>
+        <li class="text-xl font-semibold mb-3">Bases de données:</li>
+        <li class="mb-2">SQL, PL-SQL</li>
+        <li class="text-xl font-semibold mb-3">Administration de Site Web:</li>
+        <li class="mb-2">HTML, CSS, PHP, JavaScript, Vue.js</li>
+        <li class="text-xl font-semibold mb-3">Programmation d'application:</li>
+        <li class="mb-2">C, C++, Java, Python</li>
+        <li class="text-xl font-semibold mb-3">Services Web:</li>
+        <li class="mb-2">RMI, sockets, services Web, SOAP, API REST</li>
+      </ul>
+    </section>
+
+    <div
+      class="fixed bottom-20 right-5 bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer opacity-0 hidden large-icon"
+      id="goTop"
+    >
+      &#8679;
+    </div>
+
+    <section
+      class="container mx-auto text-center py-10 px-4 rounded"
+      id="contact"
+    >
+      <h2 class="text-3xl font-semibold mb-4">Contactez-moi</h2>
+
+      <div id="error-message" style="color: red"></div>
+
+      <form action="sendemail.php" id="contactForm" method="post">
+        <label for="name">Nom :</label>
+        <input id="name" name="name" required type="text" /><br />
+
+        <label for="firstName">Prénom :</label>
+        <input id="firstName" name="firstName" required type="text" /><br />
+
+        <label for="email">Email :</label>
+        <input id="email" name="email" required type="email" />
+
+        <div class="textarea-group">
+          <label for="message">Message: </label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <input
+          id="g-recaptcha-response"
+          name="g-recaptcha-response"
+          type="hidden"
+        />
+        <br />
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <footer class="bg-blue-500 text-white py-6">
+      <div class="container mx-auto text-center">
+        <div class="flex justify-center space-x-4">
+          <a
+            class="hover:text-blue-500"
+            href="https://www.linkedin.com/in/jean-philippe-vert-890727291"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script
+      async
+      src="JS/http_cdn.jsdelivr.net_gh_alpinejs_alpine@v2.x.x_dist_alpine.js"
+    ></script>
+    <script src="JS/http_code.jquery.com_jquery-3.6.0.js"></script>
+    <script src="JS/scripts.js"></script>
+  </body>
+</html>

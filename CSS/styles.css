@@ -1,0 +1,139 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.large-icon {
+    font-size: 20px;
+}
+
+.img-hover {
+    transition: transform 0.3s;
+}
+
+.img-hover:hover {
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-link {
+    bottom: 15vh;
+}
+
+/* Style par défaut pour les smartphones */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent */
+    z-index: 1000;
+    /* Pour s'assurer qu'il s'affiche au-dessus des autres éléments */
+}
+
+/* Contenu de la fenêtre modale */
+.modal-content {
+    position: relative;
+    margin: 1% auto;
+    padding: 20px;
+    width: 96%;
+    max-height: 97vh;
+    /* Maximum 90% de la hauteur de la fenêtre viewport. Ajustez selon vos besoins */
+    overflow-y: auto;
+    /* Ajoute une barre de défilement verticale si nécessaire */
+    background-color: #fff;
+}
+
+.lien-modal,
+ul > li:nth-child(1) > div > a {
+    font-weight: bold;
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+/* Style pour les ordinateurs */
+@media screen and (min-width: 768px) {
+
+    /* 768px est une valeur couramment utilisée pour distinguer les smartphones des tablettes et ordinateurs. Adjustez selon vos besoins. */
+    .modal {
+        width: 50%;
+        /* Moitié de l'écran */
+        left: 50%;
+        /* Déplace le modal à droite */
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dans votre fichier CSS */
+input, textarea {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    /* Optionnel, pour des coins arrondis */
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.textarea-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea-group label {
+    margin-right: 10px;
+    /* ajustez la marge comme vous le souhaitez */
+}
+
+/* CSS pour centrer le reCAPTCHA */
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
